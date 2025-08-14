@@ -1,0 +1,31 @@
+{
+  "name": "horse-futsal-league",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "cloudinary": "2.5.1",
+    "jsonwebtoken": "9.0.2",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.5.31",
+    "lucide-react": "^0.263.1",
+    "mongoose": "8.7.2",
+    "next": "14.2.31",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "recharts": "^2.8.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "eslint": "8.57.1",
+    "eslint-config-next": "14.2.31",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17"
+  }
+}

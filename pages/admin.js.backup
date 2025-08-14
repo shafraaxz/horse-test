@@ -1,0 +1,33 @@
+import fs from 'fs';
+import path from 'path';
+
+export default function AdminPage({ htmlContent }) {
+  // Return the HTML content directly
+  return (
+    <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+  );
+}
+
+export async function getServerSideProps() {
+  try {
+    // Read the admin.html file
+    const filePath = path.join(process.cwd(), 'public', 'admin.html');
+    const htmlContent = fs.readFileSync(filePath, 'utf8');
+    
+    return {
+      props: {
+        htmlContent
+      }
+    };
+  } catch (error) {
+    console.error('Error reading admin.html:', error);
+    
+    // Fallback: redirect to admin.html
+    return {
+      redirect: {
+        destination: '/admin.html',
+        permanent: false
+      }
+    };
+  }
+}
